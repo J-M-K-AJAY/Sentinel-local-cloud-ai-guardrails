@@ -1,7 +1,53 @@
+# Python cache files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Virtual environments
 .venv/
 venv/
-__pycache__/
-*.pyc
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables and secrets
 .env
+.env.*
+!.env.example
+
+# macOS
 .DS_Store
+
+# Testing and coverage
 .pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# Flask
+instance/
+.webassets-cache
+
+# IDE and editor
+.vscode/
+.idea/
+
+# Python tools
+.mypy_cache/
+.pyre/
+.ruff_cache/
+
+# Temporary files
+tempCodeRunnerFile.py
+*.log
