@@ -38,7 +38,7 @@ Browser (HTML/CSS/JS)
 ## Project structure
 
 ```text
-ai-cloud-guardrails-frontend/
+Sentinel-local-cloud-ai-guardrails
 ├── app.py
 ├── main.py                    # Original CLI entry point
 ├── input_guardrail.py         # Original input rules
@@ -73,6 +73,7 @@ ai-cloud-guardrails-frontend/
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate        # macOS / Linux
+   
    # .venv\\Scripts\\activate     # Windows PowerShell
    ```
 
@@ -101,7 +102,7 @@ The web app and model are intended to run on the same machine. The browser sends
 ## Run the original tests
 
 ```bash
-python -m unittest -v
+python -m unittest -v     #Claims six input-guardrail tests
 ```
 
 The supplied project contained six input-guardrail unit tests. Run them locally after setup to confirm the current environment.
