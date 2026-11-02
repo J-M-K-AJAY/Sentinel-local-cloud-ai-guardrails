@@ -38,14 +38,16 @@ Browser (HTML/CSS/JS)
 ## Project structure
 
 ```text
-Sentinel-local-cloud-ai-guardrails
+Sentinel-local-cloud-ai-guardrails/
+├── .gitignore
+├── DEPLOYMENT.md
 ├── app.py
-├── main.py                    # Original CLI entry point
-├── input_guardrail.py         # Original input rules
-├── output_guardrail.py        # Original output rules
-├── llm_client.py              # Ollama client
-├── fallback_handler.py        # Safe fallback text
-├── test_guardrails.py         # Original unit tests
+├── main.py
+├── input_guardrail.py
+├── output_guardrail.py
+├── llm_client.py
+├── fallback_handler.py
+├── test_guardrails.py
 ├── requirements.txt
 ├── templates/
 │   └── index.html
@@ -72,37 +74,45 @@ Sentinel-local-cloud-ai-guardrails
 
    ```bash
    python3 -m venv .venv
+   ```
+   **Activate it:
+   ```
    source .venv/bin/activate        # macOS / Linux
    
    # .venv\\Scripts\\activate     # Windows PowerShell
    ```
 
-3. **Install dependencies:**
+4. **Install dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Start Ollama** (if it is not already running):
+5. **Start Ollama** (if it is not already running):
 
    ```bash
    ollama serve
    ```
 
-5. **Start the web app** in another terminal:
+6. **Start the web app** in another terminal:
 
    ```bash
    python app.py
    ```
 
-6. Open <http://127.0.0.1:5000> in your browser.
+7. Open <http://127.0.0.1:5000> in your browser.
 
 The web app and model are intended to run on the same machine. The browser sends prompts to Flask; Flask calls Ollama at `http://localhost:11434`.
 
 ## Run the original tests
 
 ```bash
-python -m unittest -v     #Claims six input-guardrail tests
+## Run the original tests
+
+Run the following command from the project root:
+
+```bash
+python -m unittest -v
 ```
 
 The supplied project contained six input-guardrail unit tests. Run them locally after setup to confirm the current environment.
